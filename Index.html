@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&J CondotelRent</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=ibm-plex-sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Sarabun', sans-serif;
+        }
+        
+        body {
+            background: rgba(255, 255, 255, 0.95);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background: #ffffff !important;
+            box-shadow: 0 4px 20px rgba(255, 244, 204, 0.1);
+        }
+        
+        .hero-section {
+            padding: 100px 0;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .btn-custom {
+            background: linear-gradient(135deg, rgba(70,130,255,0.18) 0%, rgba(30,144,255,0.10) 100%);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgb(12, 12, 12);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+        
+        .location-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: rgba(0,0,0,0.3);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        .badge-price {
+            background: #ff1c1c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-building"></i> K&J CondotelRent
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page1.html">กรุงเทพฯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">พัทยา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">ชะอำ-ปึกเตียน</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page7.html">ดาวน์โหลด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page8.html">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container" data-aos="fade-up">
+            <h1>K&J CondotelRent</h1>
+            <p>บริการให้เช่าห้องพักสไตล์คอนโด รายวัน–รายเดือน</p>
+            <img src="/images/Location.jpg" alt="ภาพทำเลคอนโด" class="img-fluid mb-4 rounded" style="max-height:600px; width:100%; object-fit:cover;">
+            <a href="#locations" class="btn btn-custom btn-lg">
+                <i class="fas fa-search"></i> เริ่มค้นหาที่พักของเรา
+            </a>
+        </div>
+    </div>
+
+    <!-- Locations Section -->
+    <div class="location-section" id="locations">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">เลือกทำเลที่คุณสนใจ</h2>
+            
+            <div class="row g-4">
+                <!-- Bangkok Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&h=400&fit=crop" class="card-img-top" alt="กรุงเทพฯ">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h5 class="card-title">คอนโดกรุงเทพฯ</h5>
+                            <p class="card-text">ใจกลางเมือง ใกล้รถไฟฟ้า ครบสิ่งอำนวยความสะดวก</p>
+                            <span class="badge-price">เริ่มต้น 1,000 บาท</span>
+                            <div class="mt-3">
+                                <a href="page1.html" class="btn btn-custom">
+                                    <i class="fas fa-arrow-right"></i> ดูรายละเอียด
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pattaya Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" class="card-img-top" alt="พัทยา">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <h5 class="card-title">คอนโดพัทยา</h5>
+                            <p class="card-text">วิวทะเล บรรยากาศรีสอร์ท เหมาะสำหรับการพักผ่อน</p>
+                            <span class="badge-price">เริ่มต้น 1,200 บาท</span>
+                            <div class="mt-3">
+                                <a href="page2.html" class="btn btn-custom">
+                                    <i class="fas fa-arrow-right"></i> ดูรายละเอียด
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cha-am Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop" class="card-img-top" alt="ชะอำ">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h5 class="card-title">คอนโดชะอำ-ปึกเตียน</h5>
+                            <p class="card-text">ชายทะเล บรรยากาศเงียบสงบ เหมาะแก่การพักอาศัย</p>
+                            <span class="badge-price">เริ่มต้น 1,000 บาท</span>
+                            <div class="mt-3">
+                                <a href="page3.html" class="btn btn-custom">
+                                    <i class="fas fa-arrow-right"></i> ดูรายละเอียด
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel (Additional Info Cards) -->
+            <div class="container mt-4" data-aos="fade-up">
+                <div id="locationCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Location images">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="/images/slide1.jpg" class="d-block w-100 carousel-img rounded" alt="ภาพสไลด์ 1 - ทำเล กรุงเทพฯ">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slide2.jpg" class="d-block w-100 carousel-img rounded" alt="ภาพสไลด์ 2 - ทำเล พัทยา">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slide3.jpg" class="d-block w-100 carousel-img rounded" alt="ภาพสไลด์ 3 - ทำเล ชะอำ">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slide4.jpg" class="d-block w-100 carousel-img rounded" alt="ภาพสไลด์ 4 - บรรยากาศคอนโด">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slide5.jpg" class="d-block w-100 carousel-img rounded" alt="ภาพสไลด์ 5 - วิวทะเล">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/slide6.jpg" class="d-block w-100 carousel-img rounded" alt="ภาพสไลด์ 6 - ภายในห้องพัก">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#locationCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">ก่อนหน้า</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#locationCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">ถัดไป</span>
+                    </button>
+                </div>
+            </div>
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="100">
+                <h3>สนใจห้องพักของเรา?</h3>
+                <p>ติดต่อเราเพื่อสอบถามข้อมูลเพิ่มเติมและจองห้องพักได้เลย!</p>  
+            <div class="mt-3">
+                <a href="page8.html" class="btn btn-custom">
+                    <i class="fas fa-arrow-right"></i> ติดต่อเราเพื่อจองห้องพัก
+                                    </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 K&J CondotelRent บริการให้เช่าคอนโด รายวัน-รายเดือน - All Rights Reserved</p>
+            <p class="mt-2">
+                <i class="fas fa-phone"></i> 086 342 9855 | 
+                <i class="fas fa-envelope"></i> jew.scb18@gmail.com
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+            

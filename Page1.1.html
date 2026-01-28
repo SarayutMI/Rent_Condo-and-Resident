@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดคอนโด - กรุงเทพฯ</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Sarabun', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .detail-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .condo-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .price-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .info-section {
+            margin: 30px 0;
+        }
+        
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .info-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            width: 180px;
+            display: inline-block;
+        }
+        
+        .info-value {
+            color: #333;
+        }
+        
+        .feature-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: #667eea;
+            margin-right: 15px;
+        }
+        
+        .btn-contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-contact:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+        
+        .btn-back {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-back:hover {
+            background: #5a6268;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-building"></i> K&J CondotelRent
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="page1.html">กรุงเทพฯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">พัทยา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">ชะอำ-ปึกเตียน</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page7.html">ดาวน์โหลด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page8.html">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Content -->
+    <div class="container">
+        <div class="detail-container" data-aos="fade-up">
+            <a href="page1.html" class="btn btn-back mb-4">
+                <i class="fas fa-arrow-left"></i> กลับหน้ารายการ
+            </a>
+
+            <h1 class="condo-title" id="condoTitle">The Prime Sukhumvit</h1>
+
+            <!-- Main Image -->
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop" 
+                 class="main-image" id="mainImage" alt="คอนโด">
+
+            <!-- Gallery -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-3 col-6">
+                    <a href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop" data-lightbox="gallery">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop" class="gallery-image" alt="ห้องนั่งเล่น">
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop" data-lightbox="gallery">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop" class="gallery-image" alt="ห้องนอน">
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop" data-lightbox="gallery">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop" class="gallery-image" alt="ห้องครัว">
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop" data-lightbox="gallery">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop" class="gallery-image" alt="ห้องน้ำ">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Price Section -->
+            <div class="price-section text-center">
+                <div class="price-label">ราคาพิเศษ</div>
+                <div class="price-amount" id="condoPrice">3.8 ล้านบาท</div>
+                <p class="mb-0">*ราคารวมค่าโอน ค่าจดจำนอง</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Basic Info -->
+                    <div class="info-section">
+                        <h2 class="info-title"><i class="fas fa-info-circle"></i> ข้อมูลทั่วไป</h2>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-map-marker-alt"></i> ทำเล:</span>
+                            <span class="info-value" id="location">สุขุมวิท 71 ใกล้ BTS พระโขนง</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-bed"></i> ห้องนอน:</span>
+                            <span class="info-value" id="bedroom">2 ห้อง</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-bath"></i> ห้องน้ำ:</span>
+                            <span class="info-value" id="bathroom">2 ห้อง</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-ruler-combined"></i> ขนาด:</span>
+                            <span class="info-value" id="size">65 ตร.ม.</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-building"></i> ชั้น:</span>
+                            <span class="info-value">18 / 30</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-compass"></i> ทิศ:</span>
+                            <span class="info-value">ทิศเหนือ (วิวเมือง)</span>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="info-section">
+                        <h2 class="info-title"><i class="fas fa-align-left"></i> รายละเอียด</h2>
+                        <p>คอนโดหรู ทำเลใจกลางสุขุมวิท ใกล้ BTS พระโขนง เพียง 200 เมตร พร้อมเฟอร์นิเจอร์ครบชุด 
+                        ห้องสวย วิวสวนและวิวเมือง ราคาต่ำกว่าตลาด เหมาะสำหรับอยู่อาศัยหรือลงทุนให้เช่า</p>
+                        <p>โครงการพร้อมสิ่งอำนวยความสะดวกครบครัน มีระบบรักษาความปลอดภัย 24 ชั่วโมง 
+                        พร้อมลิฟต์โดยสารความเร็วสูง และที่จอดรถใต้อาคารเพียงพอ</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Facilities -->
+                    <div class="info-section">
+                        <h2 class="info-title"><i class="fas fa-star"></i> สิ่งอำนวยความสะดวก</h2>
+                        <div class="feature-box">
+                            <i class="fas fa-swimming-pool feature-icon"></i>
+                            <strong>สระว่ายน้ำ</strong>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-dumbbell feature-icon"></i>
+                            <strong>ฟิตเนส</strong>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-shield-alt feature-icon"></i>
+                            <strong>รักษาความปลอดภัย 24 ชม.</strong>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-car feature-icon"></i>
+                            <strong>ที่จอดรถ</strong>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-key feature-icon"></i>
+                            <strong>Key Card</strong>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-video feature-icon"></i>
+                            <strong>CCTV</strong>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="info-section">
+                        <h2 class="info-title"><i class="fas fa-phone"></i> ติดต่อสอบถาม</h2>
+                        <div class="text-center">
+                            <a href="page8.html" class="btn btn-contact w-100 mb-3">
+                                <i class="fas fa-envelope"></i> ส่งข้อความ
+                            </a>
+                            <a href="tel:02-xxx-xxxx" class="btn btn-contact w-100">
+                                <i class="fas fa-phone"></i> โทร 02-XXX-XXXX
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Dynamic content based on URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const condoId = urlParams.get('id');
+
+        const condoData = {
+            '1': {
+                title: 'The Prime Sukhumvit',
+                price: '3.8 ล้านบาท',
+                location: 'สุขุมวิท 71 ใกล้ BTS พระโขนง',
+                bedroom: '2 ห้อง',
+                bathroom: '2 ห้อง',
+                size: '65 ตร.ม.',
+                image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop'
+            },
+            '2': {
+                title: 'Rhythm Asoke',
+                price: '2.5 ล้านบาท',
+                location: 'อโศก ใกล้ MRT พระราม 9',
+                bedroom: '1 ห้อง',
+                bathroom: '1 ห้อง',
+                size: '35 ตร.ม.',
+                image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop'
+            },
+            '3': {
+                title: 'Life Ladprao',
+                price: '3.2 ล้านบาท',
+                location: 'ลาดพร้าว ใกล้ MRT ลาดพร้าว',
+                bedroom: '2 ห้อง',
+                bathroom: '1 ห้อง',
+                size: '48 ตร.ม.',
+                image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop'
+            },
+            '4': {
+                title: 'Noble Ploenchit',
+                price: '15.8 ล้านบาท',
+                location: 'เพลินจิต ใกล้ BTS เพลินจิต',
+                bedroom: '3 ห้อง',
+                bathroom: '3 ห้อง',
+                size: '120 ตร.ม.',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop'
+            },
+            '5': {
+                title: 'Ideo Mobi Sathorn',
+                price: '2.9 ล้านบาท',
+                location: 'สาทร ใกล้ BTS ช่องนนทรี',
+                bedroom: '1 ห้อง',
+                bathroom: '1 ห้อง',
+                size: '28 ตร.ม.',
+                image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop'
+            },
+            '6': {
+                title: 'The Base Rama 9',
+                price: '4.2 ล้านบาท',
+                location: 'พระราม 9 ใกล้ Airport Link รามคำแหง',
+                bedroom: '2 ห้อง',
+                bathroom: '2 ห้อง',
+                size: '58 ตร.ม.',
+                image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop'
+            }
+        };
+
+        if (condoId && condoData[condoId]) {
+            const data = condoData[condoId];
+            document.getElementById('condoTitle').textContent = data.title;
+            document.getElementById('condoPrice').textContent = data.price;
+            document.getElementById('location').textContent = data.location;
+            document.getElementById('bedroom').textContent = data.bedroom;
+            document.getElementById('bathroom').textContent = data.bathroom;
+            document.getElementById('size').textContent = data.size;
+            document.getElementById('mainImage').src = data.image;
+        }
+    </script>
+</body>
+</html>

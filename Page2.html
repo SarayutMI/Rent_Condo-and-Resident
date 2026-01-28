@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คอนโดพัทยา - วิวทะเล บรรยากาศรีสอร์ท</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Sarabun', sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .page-header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 0;
+            margin-bottom: 40px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            backdrop-filter: blur(10px);
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .condo-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .condo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .condo-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .condo-body {
+            padding: 25px;
+        }
+        
+        .condo-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0072ff;
+            margin-bottom: 15px;
+        }
+        
+        .condo-location {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .condo-features {
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .feature-item i {
+            color: #0072ff;
+            margin-right: 5px;
+        }
+        
+        .price-tag {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin: 15px 0;
+        }
+        
+        .badge-seaview {
+            background: #00c6ff;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .btn-view-detail {
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-view-detail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+            color: white;
+        }
+        
+        footer {
+            background: rgba(0,0,0,0.3);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-building"></i> K&J CondotelRent
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page1.html">กรุงเทพฯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="page2.html">พัทยา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">ชะอำ-ปึกเตียน</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page7.html">ดาวน์โหลด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page8.html">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-umbrella-beach"></i> คอนโดพัทยา</h1>
+            <p>วิวทะเล บรรยากาศรีสอร์ท เหมาะสำหรับการพักผ่อน</p>
+        </div>
+    </div>
+
+    <!-- Condo Listings -->
+    <div class="container">
+        <div class="row">
+            <!-- Condo 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="condo-card">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" class="condo-image" alt="คอนโด">
+                    <div class="condo-body">
+                        <h3 class="condo-title">
+                            The Riviera Jomtien
+                            <span class="badge-seaview"><i class="fas fa-water"></i> Sea View</span>
+                        </h3>
+                        <p class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> จอมเทียน ติดชายหาด
+                        </p>
+                        <div class="condo-features">
+                            <span class="feature-item"><i class="fas fa-bed"></i> 2 ห้องนอน</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> 2 ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> 75 ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">2.8 ล้านบาท</div>
+                        <a href="page2.1.html?id=1" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condo 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="condo-card">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop" class="condo-image" alt="คอนโด">
+                    <div class="condo-body">
+                        <h3 class="condo-title">
+                            Laguna Beach Resort
+                            <span class="badge-seaview"><i class="fas fa-water"></i> Sea View</span>
+                        </h3>
+                        <p class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> หาดจอมเทียน วิวทะเล 180 องศา
+                        </p>
+                        <div class="condo-features">
+                            <span class="feature-item"><i class="fas fa-bed"></i> 1 ห้องนอน</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> 1 ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> 42 ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">1.8 ล้านบาท</div>
+                        <a href="page2.1.html?id=2" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condo 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="condo-card">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" class="condo-image" alt="คอนโด">
+                    <div class="condo-body">
+                        <h3 class="condo-title">
+                            Centara Avenue
+                        </h3>
+                        <p class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> พัทยากลาง ใกล้ Terminal 21
+                        </p>
+                        <div class="condo-features">
+                            <span class="feature-item"><i class="fas fa-bed"></i> 1 ห้องนอน</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> 1 ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> 35 ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">2.2 ล้านบาท</div>
+                        <a href="page2.1.html?id=3" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condo 4 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="condo-card">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" class="condo-image" alt="คอนโด">
+                    <div class="condo-body">
+                        <h3 class="condo-title">
+                            The Base Central Pattaya
+                        </h3>
+                        <p class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> พัทยากลาง ใกล้เซ็นทรัล
+                        </p>
+                        <div class="condo-features">
+                            <span class="feature-item"><i class="fas fa-bed"></i> 2 ห้องนอน</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> 1 ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> 52 ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">3.5 ล้านบาท</div>
+                        <a href="page2.1.html?id=4" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condo 5 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="condo-card">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop" class="condo-image" alt="คอนโด">
+                    <div class="condo-body">
+                        <h3 class="condo-title">
+                            Arcadia Beach Resort
+                            <span class="badge-seaview"><i class="fas fa-water"></i> Sea View</span>
+                        </h3>
+                        <p class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> วงศ์อมาตย์ บีช
+                        </p>
+                        <div class="condo-features">
+                            <span class="feature-item"><i class="fas fa-bed"></i> Studio</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> 1 ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> 28 ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">1.5 ล้านบาท</div>
+                        <a href="page2.1.html?id=5" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condo 6 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="condo-card">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&h=400&fit=crop" class="condo-image" alt="คอนโด">
+                    <div class="condo-body">
+                        <h3 class="condo-title">
+                            Unixx South Pattaya
+                        </h3>
+                        <p class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> พัทยาใต้ ถนนเลียบหาด
+                        </p>
+                        <div class="condo-features">
+                            <span class="feature-item"><i class="fas fa-bed"></i> 2 ห้องนอน</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> 2 ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> 68 ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">4.8 ล้านบาท</div>
+                        <a href="page2.1.html?id=6" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 ขายคอนโด - All Rights Reserved</p>
+            <p class="mt-2">
+                <i class="fas fa-phone"></i> 02-XXX-XXXX | 
+                <i class="fas fa-envelope"></i> info@condosale.com
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
