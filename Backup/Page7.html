@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ดาวน์โหลดเอกสาร - K&J CondotelRent</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Sarabun", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 50px;
+      }
+      .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .page-header {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px 0;
+        margin-bottom: 40px;
+        text-align: center;
+        color: white;
+        backdrop-filter: blur(10px);
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .document-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+      .document-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+      .doc-icon {
+        font-size: 3rem;
+        color: #667eea;
+        margin-bottom: 15px;
+      }
+      .doc-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .doc-description {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+      }
+      .doc-info {
+        color: #999;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+      }
+      .btn-download {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+      .btn-download:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        color: white;
+      }
+      .download-stats {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }
+      .stat-item {
+        text-align: center;
+      }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #667eea;
+      }
+      .stat-label {
+        color: #666;
+        font-size: 1rem;
+      }
+      footer {
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        padding: 30px 0;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"
+          ><i class="fas fa-building"></i> K&J CondotelRent</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">หน้าแรก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page1.html">กรุงเทพฯ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page2.html">พัทยา</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page3.html">ชะอำ-ปึกเตียน</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./Page7.html">ดาวน์โหลด</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page8.html">ติดต่อเรา</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-header">
+      <div class="container">
+        <h1><i class="fas fa-download"></i> ดาวน์โหลดเอกสาร</h1>
+        <p>เอกสารสำคัญ แบบฟอร์ม และข้อมูลที่จำเป็นสำหรับการซื้อคอนโด</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="download-stats" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-4 stat-item">
+            <div class="stat-number">10</div>
+            <div class="stat-label">เอกสารทั้งหมด</div>
+          </div>
+          <div class="col-md-4 stat-item">
+            <div class="stat-number">5,847</div>
+            <div class="stat-label">ดาวน์โหลดทั้งหมด</div>
+          </div>
+          <div class="col-md-4 stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">ฟรี ไม่มีค่าใช้จ่าย</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Document 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3 class="doc-title">แบบฟอร์มจองคอนโด</h3>
+            <p class="doc-description">
+              แบบฟอร์มสำหรับจองคอนโด ระบุข้อมูลและเงื่อนไขการจอง
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 2.5 MB |
+              <i class="fas fa-download"></i> 1,234 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('form_booking.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h3 class="doc-title">สัญญาซื้อขายตัวอย่าง</h3>
+            <p class="doc-description">
+              ตัวอย่างสัญญาเช่าอยู่ K&J CondotelRent พร้อมเงื่อนไขและข้อตกลง
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 3.8 MB |
+              <i class="fas fa-download"></i> 987 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('contract_sample.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <h3 class="doc-title">ใบสมัครขอสินเชื่อ</h3>
+            <p class="doc-description">
+              แบบฟอร์มสมัครขอสินเชื่อเพื่อซื้อคอนโด จากธนาคารคู่ค้า
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 1.9 MB |
+              <i class="fas fa-download"></i> 756 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('loan_application.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="document-card">
+            <div class="doc-icon text-center"><i class="fas fa-map"></i></div>
+            <h3 class="doc-title">แผนผังโครงการ</h3>
+            <p class="doc-description">
+              แผนผังรวมของทุกโครงการ แสดงตำแหน่งอาคารและสิ่งอำนวยความสะดวก
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 5.2 MB |
+              <i class="fas fa-download"></i> 1,089 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('site_plan.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-ruler-combined"></i>
+            </div>
+            <h3 class="doc-title">แปลนห้องทุกประเภท</h3>
+            <p class="doc-description">
+              แปลนห้อง Studio, 1 ห้องนอน, 2 ห้องนอน พร้อมขนาดและรายละเอียด
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 4.5 MB |
+              <i class="fas fa-download"></i> 1,456 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('floor_plans.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-list-check"></i>
+            </div>
+            <h3 class="doc-title">เช็คลิสต์เอกสารการโอน</h3>
+            <p class="doc-description">
+              รายการเอกสารที่จำเป็นสำหรับการโอนกรรมสิทธิ์
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 1.2 MB |
+              <i class="fas fa-download"></i> 645 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('transfer_checklist.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 7 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3 class="doc-title">ตารางคำนวณค่าใช้จ่าย</h3>
+            <p class="doc-description">
+              ตารางคำนวณค่าโอน ค่าธรรมเนียม และภาษีต่างๆ
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> Excel |
+              <i class="fas fa-cloud-download-alt"></i> 890 KB |
+              <i class="fas fa-download"></i> 823 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('cost_calculator.xlsx')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 8 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="document-card">
+            <div class="doc-icon text-center"><i class="fas fa-book"></i></div>
+            <h3 class="doc-title">คู่มือการซื้อคอนโด</h3>
+            <p class="doc-description">
+              คู่มือครบครันตั้งแต่การเลือก จนถึงการโอนกรรมสิทธิ์
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 6.8 MB |
+              <i class="fas fa-download"></i> 1,567 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('buying_guide.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 9 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="document-card">
+            <div class="doc-icon text-center"><i class="fas fa-gavel"></i></div>
+            <h3 class="doc-title">กฎระเบียบนิติบุคคล</h3>
+            <p class="doc-description">
+              ข้อบังคับและกฎระเบียบของนิติบุคคลอาคารชุด
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 2.1 MB |
+              <i class="fas fa-download"></i> 534 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('juristic_rules.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+
+        <!-- Document 10 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="document-card">
+            <div class="doc-icon text-center">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <h3 class="doc-title">ใบเสนอราคาพิเศษ</h3>
+            <p class="doc-description">
+              ใบเสนอราคาพร้อมโปรโมชั่นและส่วนลดพิเศษ
+            </p>
+            <p class="doc-info">
+              <i class="fas fa-file-alt"></i> PDF |
+              <i class="fas fa-cloud-download-alt"></i> 1.5 MB |
+              <i class="fas fa-download"></i> 912 ครั้ง
+            </p>
+            <button
+              class="btn btn-download"
+              onclick="downloadFile('price_quotation.pdf')"
+            >
+              <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <div
+          style="
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+          "
+        >
+          <h3 style="color: #667eea; margin-bottom: 15px">
+            <i class="fas fa-info-circle"></i> ต้องการความช่วยเหลือ?
+          </h3>
+          <p style="color: #666; margin-bottom: 20px">
+            หากมีข้อสงสัยเกี่ยวกับเอกสารหรือต้องการคำแนะนำเพิ่มเติม
+          </p>
+          <a
+            href="./page8.html"
+            class="btn btn-download"
+            style="max-width: 300px; margin: 0 auto"
+          >
+            <i class="fas fa-phone"></i> ติดต่อเรา
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-0">&copy; 2024 K&J CondotelRent - All Rights Reserved</p>
+        <p class="mt-2">
+          <i class="fas fa-phone"></i> 02-XXX-XXXX |
+          <i class="fas fa-envelope"></i> info@condosale.com
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      function downloadFile(filename) {
+        // In real implementation, this would download the actual file
+        alert(
+          "กำลังดาวน์โหลดไฟล์: " +
+            filename +
+            "\n\n(ในระบบจริงจะมีการดาวน์โหลดไฟล์จริง)",
+        );
+
+        // Simulate download by creating a temporary link
+        // In production, this would point to actual file URLs
+        console.log("Downloading: " + filename);
+      }
+    </script>
+  </body>
+</html>

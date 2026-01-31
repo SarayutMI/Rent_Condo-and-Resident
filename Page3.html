@@ -137,42 +137,63 @@
     </style>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html"
-          ><i class="fas fa-building"></i> K&J CondotelRent</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">หน้าแรก</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Page1.html">กรุงเทพฯ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Page2.html">พัทยา</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./Page3.html">ชะอำ-ปึกเตียน</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Page7.html">ดาวน์โหลด</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Page8.html">ติดต่อเรา</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-building"></i> K&J CondotelRent
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">หน้าแรก</a>
+                    </li>
+
+                    <!-- กรุงเทพฯ dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="bangkokDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            กรุงเทพฯ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="bangkokDropdown">
+                            <li><a class="dropdown-item" href="./Page1.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page1.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- พัทยา dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pattayaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            พัทยา
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pattayaDropdown">
+                            <li><a class="dropdown-item" href="./Page2.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page2.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ชะอำ-ปึกเตียน dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="chaamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ชะอำ-ปึกเตียน
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="chaamDropdown">
+                            <li><a class="dropdown-item" href="./Page3.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page3.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page7.html">ดาวน์โหลด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page8.html">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <div class="page-header">
