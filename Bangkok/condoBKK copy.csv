@@ -1,0 +1,4 @@
+id,title,Cenlocation,location,bedroom,bathroom,size,price,badgew,image
+1,Sea Breeze Condo,กรุงเทพมหานคร,สุขุมวิท 71 ใกล้ BTS พระโขนง,2,2,65,฿2,500/คืน,Beachfront,https://example.com/sea-breeze.jpg
+2,Garden View Suite,กรุงเทพมหานคร,อโศก ใกล้ MRT พระราม 9,1,1,40,฿1,800/คืน,GardenView,https://example.com/garden-view.jpg
+3,Sunset Beachfront,กรุงเทพมหานคร,ลาดพร้าว ใกล้ MRT ลาดพร้าว,3,2,90,฿3,200/คืน,Beachfront,https://example.com/sunset-beach.jpg

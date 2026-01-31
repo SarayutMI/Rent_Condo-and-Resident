@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>รายละเอียดคอนโด - พัทยา</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Sarabun", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 50px;
+      }
+      .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .detail-container {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+      }
+      .main-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }
+      .gallery-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .gallery-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+      .condo-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0072ff;
+        margin-bottom: 20px;
+      }
+      .price-section {
+        background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }
+      .price-amount {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      .info-section {
+        margin: 30px 0;
+      }
+      .info-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0072ff;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #0072ff;
+        padding-bottom: 10px;
+      }
+      .info-item {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .info-item:last-child {
+        border-bottom: none;
+      }
+      .info-label {
+        font-weight: 600;
+        color: #555;
+        width: 180px;
+        display: inline-block;
+      }
+      .info-value {
+        color: #333;
+      }
+      .feature-box {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+      .feature-box:hover {
+        background: #e9ecef;
+        transform: translateX(5px);
+      }
+      .feature-icon {
+        font-size: 2rem;
+        color: #0072ff;
+        margin-right: 15px;
+      }
+      .btn-contact {
+        background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+      .btn-contact:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+        color: white;
+      }
+      .btn-back {
+        background: #6c757d;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+      .btn-back:hover {
+        background: #5a6268;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-building"></i> K&J CondotelRent
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">หน้าแรก</a>
+                    </li>
+
+                    <!-- กรุงเทพฯ dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="bangkokDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            กรุงเทพฯ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="bangkokDropdown">
+                            <li><a class="dropdown-item" href="./Page1.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page1.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- นครปฐม dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nakhonPathomDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            นครปฐม
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="nakhonPathomDropdown">
+                            <li><a class="dropdown-item" href="./Page4.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page4.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- พัทยา dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pattayaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            พัทยา
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pattayaDropdown">
+                            <li><a class="dropdown-item" href="./Page2.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page2.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- ชะอำ-ปึกเตียน dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="chaamDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ชะอำ-ปึกเตียน
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="chaamDropdown">
+                            <li><a class="dropdown-item" href="./Page3.html?period=daily">รายวัน</a></li>
+                            <li><a class="dropdown-item" href="./Page3.html?period=monthly">รายเดือน</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page7.html">ดาวน์โหลด</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Page8.html">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+      <div class="detail-container" data-aos="fade-up">
+        <a href="./Page4.1.html" class="btn btn-back mb-4"
+          ><i class="fas fa-arrow-left"></i> กลับหน้ารายการ</a
+        >
+        <h1 class="condo-title" id="condoTitle">The Riviera Jomtien</h1>
+
+        <img
+          src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop"
+          class="main-image"
+          id="mainImage"
+          alt="คอนโด"
+        />
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-3 col-6">
+            <a
+              href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&h=800&fit=crop"
+              data-lightbox="gallery"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop"
+                class="gallery-image"
+                alt="วิวทะเล"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-6">
+            <a
+              href="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop"
+              data-lightbox="gallery"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+                class="gallery-image"
+                alt="สระว่ายน้ำ"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-6">
+            <a
+              href="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop"
+              data-lightbox="gallery"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop"
+                class="gallery-image"
+                alt="ห้องนอน"
+              />
+            </a>
+          </div>
+          <div class="col-md-3 col-6">
+            <a
+              href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop"
+              data-lightbox="gallery"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+                class="gallery-image"
+                alt="ห้องครัว"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="price-section text-center">
+          <div class="price-label">ราคาพิเศษ</div>
+          <div class="price-amount" id="condoPrice">2.8 ล้านบาท</div>
+          <p class="mb-0">*ราคารวมค่าโอน ค่าจดจำนอง พร้อมเฟอร์นิเจอร์</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="info-section">
+              <h2 class="info-title">
+                <i class="fas fa-info-circle"></i> ข้อมูลทั่วไป
+              </h2>
+              <div class="info-item">
+                <span class="info-label"
+                  ><i class="fas fa-map-marker-alt"></i> ทำเล:</span
+                >
+                <span class="info-value" id="location">จอมเทียน ติดชายหาด</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"
+                  ><i class="fas fa-bed"></i> ห้องนอน:</span
+                >
+                <span class="info-value" id="bedroom">2 ห้อง</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"
+                  ><i class="fas fa-bath"></i> ห้องน้ำ:</span
+                >
+                <span class="info-value" id="bathroom">2 ห้อง</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"
+                  ><i class="fas fa-ruler-combined"></i> ขนาด:</span
+                >
+                <span class="info-value" id="size">75 ตร.ม.</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"
+                  ><i class="fas fa-building"></i> ชั้น:</span
+                >
+                <span class="info-value">22 / 35 (วิวทะเล)</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"
+                  ><i class="fas fa-compass"></i> ทิศ:</span
+                >
+                <span class="info-value">ทิศตะวันออก (วิวทะเล 180°)</span>
+              </div>
+            </div>
+
+            <div class="info-section">
+              <h2 class="info-title">
+                <i class="fas fa-align-left"></i> รายละเอียด
+              </h2>
+              <p>
+                คอนโดหรูติดชายหาดจอมเทียน วิวทะเลสวยงาม 180 องศา ห้องพร้อมอยู่
+                ตกแต่งครบพร้อมเฟอร์นิเจอร์ครบชุด ราคาต่ำกว่าตลาด
+                เหมาะสำหรับอยู่อาศัยหรือลงทุนให้เช่า ผลตอบแทนดีเยี่ยม
+              </p>
+              <p>
+                โครงการมีสิ่งอำนวยความสะดวกครบครัน สระว่ายน้ำหลายแห่ง ฟิตเนส
+                สวนสาธารณะ ระบบรักษาความปลอดภัย 24 ชั่วโมง พร้อมที่จอดรถเพียงพอ
+                ทำเลใกล้สถานที่ท่องเที่ยว ร้านอาหาร ห้างสรรพสินค้า
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="info-section">
+              <h2 class="info-title">
+                <i class="fas fa-star"></i> สิ่งอำนวยความสะดวก
+              </h2>
+              <div class="feature-box">
+                <i class="fas fa-swimming-pool feature-icon"></i
+                ><strong>สระว่ายน้ำ 5 สระ</strong>
+              </div>
+              <div class="feature-box">
+                <i class="fas fa-dumbbell feature-icon"></i
+                ><strong>ฟิตเนส ครบอุปกรณ์</strong>
+              </div>
+              <div class="feature-box">
+                <i class="fas fa-water feature-icon"></i
+                ><strong>ชายหาดส่วนตัว</strong>
+              </div>
+              <div class="feature-box">
+                <i class="fas fa-utensils feature-icon"></i
+                ><strong>ร้านอาหาร & คาเฟ่</strong>
+              </div>
+              <div class="feature-box">
+                <i class="fas fa-shield-alt feature-icon"></i
+                ><strong>รักษาความปลอดภัย 24 ชม.</strong>
+              </div>
+              <div class="feature-box">
+                <i class="fas fa-car feature-icon"></i
+                ><strong>ที่จอดรถ 2 คัน</strong>
+              </div>
+              <div class="feature-box">
+                <i class="fas fa-wifi feature-icon"></i
+                ><strong>WiFi ความเร็วสูง</strong>
+              </div>
+            </div>
+
+            <div class="info-section">
+              <h2 class="info-title">
+                <i class="fas fa-phone"></i> ติดต่อสอบถาม
+              </h2>
+              <div class="text-center">
+                <a href="./Page8.html" class="btn btn-contact w-100 mb-3">
+                  <i class="fas fa-envelope"></i> ส่งข้อความ
+                </a>
+                <a href="tel:02-xxx-xxxx" class="btn btn-contact w-100">
+                  <i class="fas fa-phone"></i> โทร 02-XXX-XXXX
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const condoId = urlParams.get("id");
+      const condoData = {
+        1: {
+          title: "The Riviera Jomtien",
+          price: "2.8 ล้านบาท",
+          location: "จอมเทียน ติดชายหาด",
+          bedroom: "2 ห้อง",
+          bathroom: "2 ห้อง",
+          size: "75 ตร.ม.",
+          image:
+            "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=800&fit=crop",
+        },
+        2: {
+          title: "Laguna Beach Resort",
+          price: "1.8 ล้านบาท",
+          location: "หาดจอมเทียน วิวทะเล 180 องศา",
+          bedroom: "1 ห้อง",
+          bathroom: "1 ห้อง",
+          size: "42 ตร.ม.",
+          image:
+            "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&h=800&fit=crop",
+        },
+        3: {
+          title: "Centara Avenue",
+          price: "2.2 ล้านบาท",
+          location: "พัทยากลาง ใกล้ Terminal 21",
+          bedroom: "1 ห้อง",
+          bathroom: "1 ห้อง",
+          size: "35 ตร.ม.",
+          image:
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop",
+        },
+        4: {
+          title: "The Base Central Pattaya",
+          price: "3.5 ล้านบาท",
+          location: "พัทยากลาง ใกล้เซ็นทรัล",
+          bedroom: "2 ห้อง",
+          bathroom: "1 ห้อง",
+          size: "52 ตร.ม.",
+          image:
+            "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&h=800&fit=crop",
+        },
+        5: {
+          title: "Arcadia Beach Resort",
+          price: "1.5 ล้านบาท",
+          location: "วงศ์อมาตย์ บีช",
+          bedroom: "Studio",
+          bathroom: "1 ห้อง",
+          size: "28 ตร.ม.",
+          image:
+            "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&h=800&fit=crop",
+        },
+        6: {
+          title: "Unixx South Pattaya",
+          price: "4.8 ล้านบาท",
+          location: "พัทยาใต้ ถนนเลียบหาด",
+          bedroom: "2 ห้อง",
+          bathroom: "2 ห้อง",
+          size: "68 ตร.ม.",
+          image:
+            "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1200&h=800&fit=crop",
+        },
+      };
+
+      if (condoId && condoData[condoId]) {
+        const data = condoData[condoId];
+        document.getElementById("condoTitle").textContent = data.title;
+        document.getElementById("condoPrice").textContent = data.price;
+        document.getElementById("location").textContent = data.location;
+        document.getElementById("bedroom").textContent = data.bedroom;
+        document.getElementById("bathroom").textContent = data.bathroom;
+        document.getElementById("size").textContent = data.size;
+        document.getElementById("mainImage").src = data.image;
+      }
+    </script>
+  </body>
+</html>

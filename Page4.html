@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>คอนโดชะอำ-ปึกเตียน - ชายทะเลสงบ</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+    <style>
+      * {
+        font-family: "Sarabun", sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        padding-top: 80px;
+      }
+      .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .page-header {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px 0;
+        margin-bottom: 40px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      /* CARD */
+      .condo-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+      .condo-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+      .condo-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+      .condo-body {
+        padding: 25px;
+      }
+      .condo-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #11998e;
+        margin-bottom: 10px;
+      }
+      .condo-location {
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .feature-item {
+        display: inline-block;
+        margin-right: 15px;
+        color: #555;
+      }
+      .feature-item i {
+        color: #11998e;
+        margin-right: 5px;
+      }
+      .price-tag {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ff6b6b;
+        margin: 15px 0;
+      }
+
+      .badge-beachfront {
+        background: #2ad1f3;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        margin-left: 8px;
+      }
+      .badge-GardenView {
+        background: #54e78e;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        margin-left: 8px;
+      }
+
+      .btn-view-detail {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 25px;
+        font-weight: 600;
+        width: 100%;
+      }
+      .btn-view-detail:hover {
+        transform: scale(1.03);
+        box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+        color: white;
+      }
+
+      footer {
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        padding: 30px 0;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-building"></i> K&J CondotelRent
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">หน้าแรก</a>
+            </li>
+
+            <!-- กรุงเทพฯ dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="bangkokDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                กรุงเทพฯ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="bangkokDropdown">
+                <li>
+                  <a class="dropdown-item" href="./Page1.html?period=daily"
+                    >รายวัน</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Page1.html?period=monthly"
+                    >รายเดือน</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- นครปฐม dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="nakhonPathomDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                นครปฐม
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nakhonPathomDropdown">
+                <li>
+                  <a class="dropdown-item" href="./Page4.html?period=daily"
+                    >รายวัน</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Page4.html?period=monthly"
+                    >รายเดือน</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- พัทยา dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="pattayaDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                พัทยา
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="pattayaDropdown">
+                <li>
+                  <a class="dropdown-item" href="./Page2.html?period=daily"
+                    >รายวัน</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Page2.html?period=monthly"
+                    >รายเดือน</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- ชะอำ-ปึกเตียน dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="chaamDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ชะอำ-ปึกเตียน
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="chaamDropdown">
+                <li>
+                  <a class="dropdown-item" href="./Page4.html?period=daily"
+                    >รายวัน</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./Page4.html?period=monthly"
+                    >รายเดือน</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./Page7.html">ดาวน์โหลด</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page8.html">ติดต่อเรา</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <h1><i class="fas fa-water"></i> คอนโดชะอำ - ปึกเตียน</h1>
+        <p>บรรยากาศเงียบสงบ เหมาะแก่การพักผ่อน</p>
+      </div>
+    </div>
+  
+    <!-- CARD LIST (CSV-driven) -->
+    <div class="container">
+        <div class="row justify-content-center" id="condo-list">
+            <!-- Cards will be injected here by JS -->
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 K&J CondotelRent</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>
+    AOS.init({ duration: 900, once: true });
+
+    // CSV file URL (should be in the same directory or CORS-enabled)
+    const csvUrl = './condos-chaam.csv';
+
+    // Map badge type to class and label
+    function getBadge(type) {
+        if (type === 'Beachfront') {
+            return `<span class="badge-beachfront">Beachfront</span>`;
+        }
+        if (type === 'GardenView') {
+            return `<span class="badge-GardenView">Garden View</span>`;
+        }
+        return '';
+    }
+
+    // Render card HTML
+    function renderCard(data, idx) {
+        return `
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" ${idx ? `data-aos-delay="${idx*150}"` : ''}>
+                <div class="condo-card">
+                    <img src="${data.image}" class="condo-image" alt="${data.title}">
+                    <div class="condo-body">
+                        <div class="condo-title">
+                            ${data.title}
+                            ${getBadge(data.badge)}
+                        </div>
+                        <div class="condo-location">
+                            <i class="fas fa-map-marker-alt"></i> ${data.location}
+                        </div>
+                        <div class="mb-2">
+                            <span class="feature-item"><i class="fas fa-bed"></i> ${data.bedroom} ห้องนอน</span>
+                            <span class="feature-item"><i class="fas fa-bath"></i> ${data.bathroom} ห้องน้ำ</span>
+                            <span class="feature-item"><i class="fas fa-ruler-combined"></i> ${data.size} ตร.ม.</span>
+                        </div>
+                        <div class="price-tag">${data.price}</div>
+                        <a href="./Page4.1.html?id=${data.id}" class="btn btn-view-detail">
+                            <i class="fas fa-eye"></i> ดูรายละเอียด
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Fetch and render CSV
+    Papa.parse(csvUrl, {
+        download: true,
+        header: true,
+        complete: function(results) {
+            const list = document.getElementById('condo-list');
+            if (results.data && results.data.length) {
+                list.innerHTML = results.data.filter(row => row.title).map(renderCard).join('');
+                AOS.refresh();
+            } else {
+                list.innerHTML = '<div class="text-center text-muted py-5">ไม่พบข้อมูลคอนโด</div>';
+            }
+        }
+    });
+    </script>

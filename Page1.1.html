@@ -53,7 +53,7 @@
 
       .main-image {
         width: 100%;
-        height: 400px;
+        height: 800px;
         object-fit: cover;
         border-radius: 15px;
         margin-bottom: 30px;
@@ -71,6 +71,11 @@
       .gallery-image:hover {
         transform: scale(1.05);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+      #galleryCarousel .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
       }
 
       .condo-title {
@@ -197,85 +202,15 @@
             <li class="nav-item">
               <a class="nav-link" href="./index.html">หน้าแรก</a>
             </li>
-
-            <!-- กรุงเทพฯ dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle active"
-                href="#"
-                id="bangkokDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                กรุงเทพฯ
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="bangkokDropdown">
-                <li>
-                  <a class="dropdown-item" href="./Page1.html?period=daily"
-                    >รายวัน</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Page1.html?period=monthly"
-                    >รายเดือน</a
-                  >
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="./Page1.html">กรุงเทพฯ</a>
             </li>
-
-            <!-- พัทยา dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="pattayaDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                พัทยา
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="pattayaDropdown">
-                <li>
-                  <a class="dropdown-item" href="./Page2.html?period=daily"
-                    >รายวัน</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Page2.html?period=monthly"
-                    >รายเดือน</a
-                  >
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page2.html">พัทยา</a>
             </li>
-
-            <!-- ชะอำ-ปึกเตียน dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="chaamDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                ชะอำ-ปึกเตียน
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="chaamDropdown">
-                <li>
-                  <a class="dropdown-item" href="./Page3.html?period=daily"
-                    >รายวัน</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Page3.html?period=monthly"
-                    >รายเดือน</a
-                  >
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="./Page3.html">ชะอำ-ปึกเตียน</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link" href="./Page7.html">ดาวน์โหลด</a>
             </li>
@@ -297,70 +232,80 @@
         <h1 class="condo-title" id="condoTitle">The Prime Sukhumvit</h1>
 
         <!-- Main Image -->
-        <img
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop"
-          class="main-image"
-          id="mainImage"
-          alt="คอนโด"
-        />
+        <img src="" class="main-image" id="mainImage" alt="คอนโด" />
 
-        <!-- Gallery -->
-        <div class="row g-3 mb-4">
-          <div class="col-md-3 col-6">
-            <a
-              href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop"
-              data-lightbox="gallery"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop"
-                class="gallery-image"
-                alt="ห้องนั่งเล่น"
-              />
-            </a>
+        <!-- Gallery Carousel -->
+        <div
+          id="galleryCarousel"
+          class="carousel slide mb-4"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner" id="galleryCarouselInner">
+            <!-- Images will be injected here by JS -->
           </div>
-          <div class="col-md-3 col-6">
-            <a
-              href="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop"
-              data-lightbox="gallery"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop"
-                class="gallery-image"
-                alt="ห้องนอน"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-6">
-            <a
-              href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop"
-              data-lightbox="gallery"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
-                class="gallery-image"
-                alt="ห้องครัว"
-              />
-            </a>
-          </div>
-          <div class="col-md-3 col-6">
-            <a
-              href="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop"
-              data-lightbox="gallery"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop"
-                class="gallery-image"
-                alt="ห้องน้ำ"
-              />
-            </a>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+        <!-- Gallery Carousel Note: หากใน CSV มี path ของโฟลเดอร์ภาพ ให้เตรียม JS สำหรับอ่านไฟล์ภาพในโฟลเดอร์นั้นและแสดงใน carousel นี้ -->
+        <div id="galleryRow" class="row mb-4"></div>
 
+        <script>
+          function renderGalleryCarouselFromFolder(folderPath) {
+            let idx = 1;
+            let images = [];
+            function checkNext() {
+              let url = `${folderPath}/image${idx}.jpg`;
+              let img = new Image();
+              img.onload = function () {
+                images.push(url);
+                idx++;
+                checkNext();
+              };
+              img.onerror = function () {
+                // เมื่อเจอไฟล์ที่ไม่มีแล้ว ให้แสดงผลลัพธ์
+                if (images.length === 0) {
+                  $("#galleryCarousel").hide();
+                  return;
+                }
+                let carouselInnerHtml = "";
+                images.forEach((imgUrl, i) => {
+                  carouselInnerHtml += `
+                                    <div class="carousel-item${i === 0 ? " active" : ""}">
+                                        <a href="${imgUrl}" data-lightbox="gallery">
+                                            <img src="${imgUrl}" class="d-block w-100 main-image" alt="Gallery Image ${i + 1}">
+                                        </a>
+                                    </div>
+                                `;
+                });
+                $("#galleryCarouselInner").html(carouselInnerHtml);
+                $("#galleryCarousel").show();
+              };
+              img.src = url;
+            }
+            checkNext();
+          }
+        </script>
         <!-- Price Section -->
         <div class="price-section text-center">
           <div class="price-label">ราคาพิเศษ</div>
-          <div class="price-amount" id="condoPrice">3.8 ล้านบาท</div>
-          <p class="mb-0">*ราคารวมค่าโอน ค่าจดจำนอง</p>
+          <div class="price-amount" id="condoPrice"></div>
+          <p class="mb-0" id="condoPriceNote"></p>
         </div>
 
         <div class="row">
@@ -374,39 +319,37 @@
                 <span class="info-label"
                   ><i class="fas fa-map-marker-alt"></i> ทำเล:</span
                 >
-                <span class="info-value" id="location"
-                  >สุขุมวิท 71 ใกล้ BTS พระโขนง</span
-                >
+                <span class="info-value" id="location"></span>
               </div>
               <div class="info-item">
                 <span class="info-label"
                   ><i class="fas fa-bed"></i> ห้องนอน:</span
                 >
-                <span class="info-value" id="bedroom">2 ห้อง</span>
+                <span class="info-value" id="bedroom"></span>
               </div>
               <div class="info-item">
                 <span class="info-label"
                   ><i class="fas fa-bath"></i> ห้องน้ำ:</span
                 >
-                <span class="info-value" id="bathroom">2 ห้อง</span>
+                <span class="info-value" id="bathroom"></span>
               </div>
               <div class="info-item">
                 <span class="info-label"
                   ><i class="fas fa-ruler-combined"></i> ขนาด:</span
                 >
-                <span class="info-value" id="size">65 ตร.ม.</span>
+                <span class="info-value" id="size"></span>
               </div>
               <div class="info-item">
                 <span class="info-label"
                   ><i class="fas fa-building"></i> ชั้น:</span
                 >
-                <span class="info-value">18 / 30</span>
+                <span class="info-value" id="floor"></span>
               </div>
               <div class="info-item">
                 <span class="info-label"
                   ><i class="fas fa-compass"></i> ทิศ:</span
                 >
-                <span class="info-value">ทิศเหนือ (วิวเมือง)</span>
+                <span class="info-value" id="direction"></span>
               </div>
             </div>
 
@@ -415,15 +358,7 @@
               <h2 class="info-title">
                 <i class="fas fa-align-left"></i> รายละเอียด
               </h2>
-              <p>
-                คอนโดหรู ทำเลใจกลางสุขุมวิท ใกล้ BTS พระโขนง เพียง 200 เมตร
-                พร้อมเฟอร์นิเจอร์ครบชุด ห้องสวย วิวสวนและวิวเมือง
-                ราคาต่ำกว่าตลาด เหมาะสำหรับอยู่อาศัยหรือลงทุนให้เช่า
-              </p>
-              <p>
-                โครงการพร้อมสิ่งอำนวยความสะดวกครบครัน มีระบบรักษาความปลอดภัย 24
-                ชั่วโมง พร้อมลิฟต์โดยสารความเร็วสูง และที่จอดรถใต้อาคารเพียงพอ
-              </p>
+              <div id="condoDescription"></div>
             </div>
           </div>
 
@@ -433,30 +368,7 @@
               <h2 class="info-title">
                 <i class="fas fa-star"></i> สิ่งอำนวยความสะดวก
               </h2>
-              <div class="feature-box">
-                <i class="fas fa-swimming-pool feature-icon"></i>
-                <strong>สระว่ายน้ำ</strong>
-              </div>
-              <div class="feature-box">
-                <i class="fas fa-dumbbell feature-icon"></i>
-                <strong>ฟิตเนส</strong>
-              </div>
-              <div class="feature-box">
-                <i class="fas fa-shield-alt feature-icon"></i>
-                <strong>รักษาความปลอดภัย 24 ชม.</strong>
-              </div>
-              <div class="feature-box">
-                <i class="fas fa-car feature-icon"></i>
-                <strong>ที่จอดรถ</strong>
-              </div>
-              <div class="feature-box">
-                <i class="fas fa-key feature-icon"></i>
-                <strong>Key Card</strong>
-              </div>
-              <div class="feature-box">
-                <i class="fas fa-video feature-icon"></i>
-                <strong>CCTV</strong>
-              </div>
+              <div id="facilitiesList"></div>
             </div>
 
             <!-- Contact -->
@@ -468,7 +380,11 @@
                 <a href="./Page8.html" class="btn btn-contact w-100 mb-3">
                   <i class="fas fa-envelope"></i> ส่งข้อความ
                 </a>
-                <a href="tel:02-xxx-xxxx" class="btn btn-contact w-100">
+                <a
+                  href="tel:02-xxx-xxxx"
+                  class="btn btn-contact w-100"
+                  id="condoPhone"
+                >
                   <i class="fas fa-phone"></i> โทร 02-XXX-XXXX
                 </a>
               </div>
@@ -488,83 +404,184 @@
         once: true,
       });
 
-      // Dynamic content based on URL parameter
-      const urlParams = new URLSearchParams(window.location.search);
-      const condoId = urlParams.get("id");
-
-      const condoData = {
-        1: {
-          title: "The Prime Sukhumvit",
-          price: "3.8 ล้านบาท",
-          location: "สุขุมวิท 71 ใกล้ BTS พระโขนง",
-          bedroom: "2 ห้อง",
-          bathroom: "2 ห้อง",
-          size: "65 ตร.ม.",
-          image:
-            "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop",
-        },
-        2: {
-          title: "Rhythm Asoke",
-          price: "2.5 ล้านบาท",
-          location: "อโศก ใกล้ MRT พระราม 9",
-          bedroom: "1 ห้อง",
-          bathroom: "1 ห้อง",
-          size: "35 ตร.ม.",
-          image:
-            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop",
-        },
-        3: {
-          title: "Life Ladprao",
-          price: "3.2 ล้านบาท",
-          location: "ลาดพร้าว ใกล้ MRT ลาดพร้าว",
-          bedroom: "2 ห้อง",
-          bathroom: "1 ห้อง",
-          size: "48 ตร.ม.",
-          image:
-            "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=800&fit=crop",
-        },
-        4: {
-          title: "Noble Ploenchit",
-          price: "15.8 ล้านบาท",
-          location: "เพลินจิต ใกล้ BTS เพลินจิต",
-          bedroom: "3 ห้อง",
-          bathroom: "3 ห้อง",
-          size: "120 ตร.ม.",
-          image:
-            "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop",
-        },
-        5: {
-          title: "Ideo Mobi Sathorn",
-          price: "2.9 ล้านบาท",
-          location: "สาทร ใกล้ BTS ช่องนนทรี",
-          bedroom: "1 ห้อง",
-          bathroom: "1 ห้อง",
-          size: "28 ตร.ม.",
-          image:
-            "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&h=800&fit=crop",
-        },
-        6: {
-          title: "The Base Rama 9",
-          price: "4.2 ล้านบาท",
-          location: "พระราม 9 ใกล้ Airport Link รามคำแหง",
-          bedroom: "2 ห้อง",
-          bathroom: "2 ห้อง",
-          size: "58 ตร.ม.",
-          image:
-            "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop",
-        },
-      };
-
-      if (condoId && condoData[condoId]) {
-        const data = condoData[condoId];
-        document.getElementById("condoTitle").textContent = data.title;
-        document.getElementById("condoPrice").textContent = data.price;
-        document.getElementById("location").textContent = data.location;
-        document.getElementById("bedroom").textContent = data.bedroom;
-        document.getElementById("bathroom").textContent = data.bathroom;
-        document.getElementById("size").textContent = data.size;
-        document.getElementById("mainImage").src = data.image;
+      // ฟังก์ชันแปลง CSV เป็น Array of Object (รองรับกรณีมี comma ใน field ด้วย)
+      function csvToArray(str, delimiter = ",") {
+        const pattern = new RegExp(
+          "(\\" +
+            delimiter +
+            "|\\r?\\n|\\r|^)" +
+            '(?:"([^"]*(?:""[^"]*)*)"|' +
+            '([^"\\' +
+            delimiter +
+            "\\r\\n]*))",
+          "gi",
+        );
+        let headers = [];
+        let data = [[]];
+        let matches = null;
+        let isHeader = true;
+        while ((matches = pattern.exec(str))) {
+          let matchedDelimiter = matches[1];
+          if (matchedDelimiter.length && matchedDelimiter !== delimiter) {
+            data.push([]);
+          }
+          let value = matches[2] ? matches[2].replace(/""/g, '"') : matches[3];
+          data[data.length - 1].push(value);
+        }
+        headers = data.shift();
+        return data
+          .filter((row) => row.length === headers.length)
+          .map((row) => {
+            return headers.reduce((obj, header, i) => {
+              obj[header.trim()] = row[i] ? row[i].trim() : "";
+              return obj;
+            }, {});
+          });
       }
+
+      // ฟังก์ชันแปลงสิ่งอำนวยความสะดวกเป็น HTML
+      function renderFacilities(facilitiesStr) {
+        if (!facilitiesStr) return "";
+        // สมมติว่าใน CSV แยกด้วย | เช่น "สระว่ายน้ำ|ฟิตเนส|ที่จอดรถ"
+        const iconMap = {
+          สระว่ายน้ำ: "fa-swimming-pool",
+          ฟิตเนส: "fa-dumbbell",
+          "รักษาความปลอดภัย 24 ชม.": "fa-shield-alt",
+          ที่จอดรถ: "fa-car",
+          "Key Card": "fa-key",
+          CCTV: "fa-video",
+          เครื่องปรับอากาศ: "fa-wind",
+          โทรทัศน์: "fa-tv",
+          "Wi-Fi": "fa-wifi",
+          ตู้เย็น: "fa-snowflake",
+          กาต้มน้ำไฟฟ้า: "fa-mug-hot",
+          ตู้นิรภัย: "fa-lock",
+          ไดร์เป่าผม: "fa-fan",
+          โต๊ะทำงาน: "fa-chair",
+          ระเบียง: "fa-umbrella-beach",
+          ลิฟต์: "fa-elevator",
+          // เพิ่มเติมได้ตามต้องการ
+        };
+        return facilitiesStr
+          .split("|")
+          .map((fac) => {
+            const icon = iconMap[fac.trim()] || "fa-star";
+            return `<div class="feature-box">
+                        <i class="fas ${icon} feature-icon"></i>
+                        <strong>${fac.trim()}</strong>
+                    </div>`;
+          })
+          .join("");
+      }
+
+      // ฟังก์ชันแปลงรายละเอียดเป็น HTML (รองรับหลายบรรทัด)
+      function renderDescription(descStr) {
+        if (!descStr) return "";
+        // สมมติว่าใน CSV แยกแต่ละย่อหน้าด้วย \n หรือ |
+        if (descStr.includes("|")) {
+          return descStr
+            .split("|")
+            .map((line) => `<p>${line.trim()}</p>`)
+            .join("");
+        }
+        return `<p>${descStr.replace(/\n/g, "</p><p>")}</p>`;
+      }
+
+      // ฟังก์ชันแปลง gallery เป็น HTML
+      function renderGallery(galleryStr) {
+        if (!galleryStr) return "";
+        // สมมติว่าใน CSV แยกแต่ละรูปด้วย | และแต่ละรูปเป็น url หรือ url,alt
+        const images = galleryStr.split("|").map((item) => {
+          const [url, alt] = item.split(",");
+          return `<div class="col-md-3 col-6">
+                        <a href="${url.trim()}" data-lightbox="gallery">
+                            <img src="${url.trim()}" class="gallery-image" alt="${alt ? alt.trim() : ""}">
+                        </a>
+                    </div>`;
+        });
+        return images.join("");
+      }
+
+      // โหลดข้อมูลจาก condo.csv
+      $(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const condoId = urlParams.get("id");
+
+        $.get("./Bangkok/condos-bangkok.csv", function (data) {
+          const condos = csvToArray(data);
+          const condo = condos.find((c) => c.id === condoId);
+          if (condo) {
+            $("#condoTitle").text(condo.title);
+            $("#condoPrice").text(condo.price);
+            $("#condoPriceNote").text(
+              condo.price_note || "*ราคารวมค่าโอน ค่าจดจำนอง",
+            );
+            $("#location").text(condo.location);
+            $("#bedroom").text(condo.bedroom);
+            $("#bathroom").text(condo.bathroom);
+            $("#size").text(condo.size);
+            $("#floor").text(condo.floor);
+            $("#direction").text(condo.direction);
+            $("#mainImage").attr("src", condo.image);
+
+            // Description
+            $("#condoDescription").html(renderDescription(condo.description));
+
+            // Facilities
+            $("#facilitiesList").html(renderFacilities(condo.facilities));
+
+            // Gallery
+            if (condo.gallery) {
+              // If the gallery field looks like a folder path (does not contain '|' and does not look like a URL)
+              if (
+                !condo.gallery.includes("|") &&
+                !condo.gallery.match(/^https?:\/\//)
+              ) {
+                // Show carousel from folder
+                $("#galleryRow").empty();
+                renderGalleryCarouselFromFolder(condo.gallery);
+              } else {
+                // Show carousel, hide grid
+                $("#galleryCarousel").show();
+                $("#galleryRow").empty();
+                // Render carousel slides
+                const images = condo.gallery.split("|").map((item) => {
+                  const [url, alt] = item.split(",");
+                  return {
+                    url: url.trim(),
+                    alt: alt ? alt.trim() : "",
+                  };
+                });
+                let carouselInnerHtml = "";
+                images.forEach((img, idx) => {
+                  carouselInnerHtml += `
+                                <div class="carousel-item${idx === 0 ? " active" : ""}">
+                                    <a href="${img.url}" data-lightbox="gallery">
+                                        <img src="${img.url}" class="d-block w-100 main-image" alt="${img.alt}">
+                                    </a>
+                                </div>
+                            `;
+                });
+                $("#galleryCarouselInner").html(carouselInnerHtml);
+              }
+            } else {
+              $("#galleryCarousel").hide();
+              $("#galleryRow").empty();
+            }
+
+            // Set phone number
+            if (condo.phone) {
+              $("#condoPhone").html(
+                `<i class="fas fa-phone"></i> โทร ${condo.phone}`,
+              );
+              $("#condoPhone").attr(
+                "href",
+                `tel:${condo.phone.replace(/[^0-9]/g, "")}`,
+              );
+            }
+          }
+        });
+      });
     </script>
   </body>
 </html>
